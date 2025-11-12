@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --background: 225 60% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 225 50% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover: 225 50% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222 47% 11%;
+    --primary: 225 60% 8%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 84% 39%;
+    --secondary: 160 66% 30%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 225 60% 8%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215 16% 47%;
@@ -163,7 +163,42 @@
   }
 
   .glow-on-hover:hover {
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+    box-shadow:
+      0 0 40px rgba(212, 175, 55, 0.6),
+      0 0 80px rgba(212, 175, 55, 0.3);
     transform: translateY(-2px);
+  }
+
+  .animate-draw-line {
+    animation: draw-line 2s ease-out forwards;
+  }
+
+  @keyframes draw-line {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .bg-dark-primary {
+    background-color: #0f1a3c;
+  }
+
+  .bg-darker {
+    background-color: #0a0f24;
+  }
+
+  .text-gold {
+    color: #d4af37;
+  }
+
+  .bg-gold {
+    background-color: #d4af37;
+  }
+
+  .border-gold {
+    border-color: #d4af37;
   }
 }
